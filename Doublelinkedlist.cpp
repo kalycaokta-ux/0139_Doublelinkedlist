@@ -122,4 +122,28 @@ public:
     }
 
     void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        // Step 1: Mark the first node as currentNode
+        Node *currentNode = START;
+
+        // Step 2: Repeat untill currentNode == NULL
+        cout << "\nRecords is ascending order of roll number are:\n";
+        int i = 0;
+        while (currentNode != NULL)
+        {
+
+            cout << i + 1 << "." << currentNode->noMhs << " " << endl;
+
+            // Step 3: Move to next node
+            currentNode = currentNode->next;
+            i++;
+        }
+    }
+    void retraverse()
 }
